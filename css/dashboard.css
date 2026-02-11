@@ -1,0 +1,21 @@
+.dashboard {
+  padding: 50px;
+  text-align: center;
+}
+
+.grid-links a {
+  display: block;
+  width: 280px;
+  margin: 15px auto;
+  padding: 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  background: #e6ecff;
+  font-weight: bold;
+  color: navy;
+}
+
+.grid-links a:hover {
+  background: navy;
+  color: white;
+}

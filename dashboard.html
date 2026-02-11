@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Dashboard | Study Buddy</title>
+
+  <link rel="stylesheet" href="css/theme.css"/>
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+
+    <!-- Main Content -->
+    <main class="content">
+
+      <div class="dashboard-banner">
+        <div class="card streak-card">
+  <h2>🔥 Study Streak</h2>
+  <p>Current Streak: <b><span id="streakCount">0</span> days</b></p>
+  <p>Best Streak: <b><span id="bestStreak">0</span> days</b></p>
+</div>
+
+<script src="js/streak.js"></script>
+        <h1>Welcome Back 👋</h1>
+        <p>Your study tools are ready. Let’s stay productive today.</p>
+      </div>
+
+      <div class="grid-cards">
+
+        <a href="calendar.html" class="card-box">
+          📅 Study Calendar
+          <span>Plan sessions</span>
+        </a>
+
+        <a href="tasks.html" class="card-box">
+           Task Manager
+          <span>Track goals</span>
+        </a>
+
+        <a href="timer.html" class="card-box">
+          ⏳ Pomodoro Timer
+          <span>Stay focused</span>
+        </a>
+
+        <a href="studyroom.html" class="card-box">
+          👥 Study Room
+          <span>Accountability</span>
+        </a>
+
+        <a href="notes.html" class="card-box">
+          📝 Notes
+          <span>Save ideas</span>
+        </a>
+
+        <a href="progress.html" class="card-box">
+          📊 Progress
+          <span>View analytics</span>
+        </a>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

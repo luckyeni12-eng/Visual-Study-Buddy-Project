@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6ff;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1 {
+  color: navy;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  background: white;
+  padding: 30px;
+  width: 220px;
+  border-radius: 18px;
+  box-shadow: 0 0 12px lightgray;
+}
+
+.stat-card h2 {
+  font-size: 45px;
+  color: navy;
+}

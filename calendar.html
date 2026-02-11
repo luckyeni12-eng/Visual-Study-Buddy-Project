@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Calendar | Study Buddy</title>
+
+  <link rel="stylesheet" href="css/theme.css"/>
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <h3>Study Menu</h3>
+      <a href="dashboard.html">🏠 Dashboard</a>
+      <a href="calendar.html" class="active">📅 Calendar</a>
+      <a href="tasks.html"> Tasks</a>
+      <a href="progress.html">📊 Progress</a>
+    </aside>
+
+    <main class="content">
+
+      <h1>📅 Study Calendar</h1>
+
+      <div class="card">
+        <form id="sessionForm">
+          <input type="text" id="topic" placeholder="Session Topic" required>
+          <input type="date" id="date" required>
+          <button type="submit">Add Session</button>
+        </form>
+      </div>
+
+      <div class="card">
+  <h2>Upcoming Sessions</h2>
+  <ul id="sessionList">
+    <!-- clickable sessions -->
+    <li><a href="#" onclick="openSession('Math Revision')">📘 Math Revision - Feb 12, 2026</a></li>
+    <li><a href="#" onclick="openSession('Science Lab Prep')">🔬 Science Lab Prep - Feb 13, 2026</a></li>
+    <li><a href="#" onclick="openSession('History Notes')">📜 History Notes - Feb 14, 2026</a></li>
+  </ul>
+</div>
+
+<script>
+  //  function to handle session clicks
+  function openSession(topic) {
+    alert('Opening session: ' + topic);
+    // You can replace alert with a redirect:
+    // window.location.href = 'session.html?topic=' + encodeURIComponent(topic);
+  }
+
+  // Optional: handle adding new sessions dynamically
+  const form = document.getElementById('sessionForm');
+  const sessionList = document.getElementById('sessionList');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const topic = document.getElementById('topic').value;
+    const date = document.getElementById('date').value;
+
+    if(topic && date) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = "#";
+      a.textContent = `📌 ${topic} - ${date}`;
+      a.onclick = () => openSession(topic);
+      li.appendChild(a);
+      sessionList.appendChild(li);
+
+      // Clear form
+      form.reset();
+    }
+  });
+</script>
+
+    </main>
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>

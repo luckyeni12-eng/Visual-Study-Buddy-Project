@@ -1,0 +1,1 @@
+console.log("Study Room module loaded.");

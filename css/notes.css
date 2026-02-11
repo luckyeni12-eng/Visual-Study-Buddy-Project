@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6ff;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1 {
+  color: navy;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 25px;
+  box-shadow: 0 0 12px lightgray;
+}
+
+textarea {
+  width: 90%;
+  height: 200px;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid gray;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  background: navy;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Tasks | Study Buddy</title>
+
+  <link rel="stylesheet" href="css/theme.css"/>
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <h3>Study Menu</h3>
+      <a href="dashboard.html">🏠 Dashboard</a>
+      <a href="tasks.html" class="active"> Tasks</a>
+      <a href="calendar.html">📅 Calendar</a>
+      <a href="progress.html">📊 Progress</a>
+    </aside>
+
+    <main class="content">
+
+      <h1> Task Manager</h1>
+
+      <div class="card">
+        <form id="taskForm">
+          <input type="text" id="taskInput" placeholder="Enter a task..." required>
+          <button type="submit">Add Task</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Your Tasks</h2>
+        <ul id="taskList"></ul>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/tasks.js"></script>
+</body>
+</html>

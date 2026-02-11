@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Progress | Study Buddy</title>
+  <link rel="stylesheet" href="css/theme.css"/>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <div class="layout">
+    <div id="sidebar"></div>
+
+    <main class="content">
+      <h1>📊 Progress Dashboard</h1>
+      <p>Track your productivity visually.</p>
+
+      <div class="card">
+        <h2>Weekly Study Hours</h2>
+        <canvas id="studyChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h2>Task Completion</h2>
+        <canvas id="taskChart"></canvas>
+      </div>
+    </main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+</html>

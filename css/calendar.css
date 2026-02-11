@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6ff;
+}
+
+.page-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h1 {
+  color: navy;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
+  box-shadow: 0 0 12px lightgray;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: navy;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #001f4d;
+}
+
+#sessionList li {
+  padding: 12px;
+  margin: 10px;
+  border-radius: 10px;
+  background: #e6ecff;
+}
