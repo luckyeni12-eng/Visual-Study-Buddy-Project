@@ -1,41 +1,46 @@
-import { getNumber, saveNumber } from "./storage.js";
+let timeLeft = 25 * 60; // 25 minutes in seconds
+let timerInterval = null;
 
-let time = 25 * 60;
-let interval;
+const timerDisplay = document.getElementById("timerDisplay");
+const startBtn = document.getElementById("startBtn");
+const resetBtn = document.getElementById("resetBtn");
 
+// Format time into MM:SS
 function updateDisplay() {
-  let min = Math.floor(time / 60);
-  let sec = time % 60;
+  let minutes = Math.floor(timeLeft / 60);
+  let seconds = timeLeft % 60;
 
-  document.getElementById("timerDisplay").textContent =
-    `${min}:${sec < 10 ? "0" : ""}${sec}`;
+  timerDisplay.textContent =
+    `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 }
 
-document.getElementById("startBtn").onclick = () => {
-  clearInterval(interval);
+// Start Timer
+function startTimer() {
+  if (timerInterval) return; // prevents multiple intervals
 
-  interval = setInterval(() => {
-    time--;
-
-    if (time <= 0) {
-      clearInterval(interval);
-
-      let total = getNumber("studyMinutes");
-      saveNumber("studyMinutes", total + 25);
-
-      alert("🎉 Pomodoro complete! Progress updated.");
-
-      time = 25 * 60;
+  timerInterval = setInterval(() => {
+    if (timeLeft > 0) {
+      timeLeft--;
+      updateDisplay();
+    } else {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      alert("Time’s up!");
     }
-
-    updateDisplay();
   }, 1000);
-};
+}
 
-document.getElementById("resetBtn").onclick = () => {
-  clearInterval(interval);
-  time = 25 * 60;
+// Reset Timer
+function resetTimer() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+  timeLeft = 25 * 60;
   updateDisplay();
-};
+}
 
+// Button Events
+startBtn.addEventListener("click", startTimer);
+resetBtn.addEventListener("click", resetTimer);
+
+// Initialize display
 updateDisplay();
